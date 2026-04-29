@@ -1,0 +1,1481 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pinball Machine Documentation</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <h1>Constructing an Electromechanical Pinball Machine Using Recycled Materials</h1>
+  <div class="img-row">
+    <img src="assets/images/support-frame.png" alt="">
+    <img src="assets/images/top-view.png" alt="">
+  </div>
+  
+  <nav>
+      <ul>
+          <li><a href="#c1">Chapter 1: The Idea</a></li>
+          <li><a href="#c2">Chapter 2: The Plan</a></li>
+          <li><a href="#c3">Chapter 3: Preparing The Workshop (shed)</a></li>
+          <li><a href="#c4">Chapter 4: It Started Simple</a></li>
+          <li><a href="#c5">Chapter 5: An Engineering Challenge</a></li>
+          <li><a href="#c6">Chapter 6: Doubling The Flippers</a></li>
+          <li><a href="#c7">Chapter 7: The Birth of The Circuit</a></li>
+          <li><a href="#c8">Chapter 8: Playfield Construction Begins</a></li>
+          <li><a href="#c9">Chapter 9: The Idea That Changes Everything</a></li>
+          <li><a href="#c10">Chapter 10: Layering Up</a></li>
+          <li><a href="#c11">Chapter 11: Arrival of The Electronics</a></li>
+          <li><a href="#c12">Chapter 12: The Ball Elevator</a></li>
+          <li><a href="#c13">Chapter 13: Painting</a></li>
+          <li><a href="#c14">Chapter 14: The Control Box</a></li>
+          <li><a href="#c15">Chapter 15: Facing The Coin Mechanism (again)</a></li>
+          <li><a href="#c16">Chapter 16: Programming</a></li>
+          <li><a href="#c17">Chapter 17: The Final Design</a></li>
+      </ul>
+  </nav>
+
+  <section id="c1">
+      <h2>Chapter 1: The Idea</h2>
+      <h3>Why I Chose To Build a Pinball Machine</h3>
+          <p>I always liked making things when I was younger and seeing how a combination of materials and parts, passive in of themselves, would combine to make something functional. So I chose an artifact as I wanted to go back to that nostalgic childhood feeling, but specifically a pinball machine as I was intrigued whether the same level of system complexity could be achieved using salvaged parts and recycled materials.</p>
+          <p>I was also interested in learning and combining several disciplines into a single coherent functional system and arcade machines were the ideal blend of mechanical systems, electronics, aesthetic design and game psychology, with the added benefit of the end product being an enjoyable machine that can be played.</p>
+          <p>Furthermore due to the interactive and playable nature of the machine it will provide an ideal opportunity for objective results using user engagement metrics and comparisons to real world data.</p>
+  </section>
+
+  <section id="c2">
+    <h2>Chapter 2: The Plan</h2>
+
+    <div class="row split-60-40">
+      <div>
+        <p>A pinball machine is a game where a ball is propelled using player-controlled flippers into a table where it bounces of various obstacles, scoring points in specific locations usually when coming to rest in hollows.<sup><a href="#fn-1" id="fnref-1">1</a></sup> </p>
+        <p>The pinball, arguable the most iconic arcade-style game of all time,<sup><a href="#fn-2" id="fnref-2">2</a></sup> originated from Bagatelle, an 18th century French parlor table game<sup><a href="#fn-3" id="fnref-3">3</a></sup> where it had undergone numerous evolvements over the next two century's. This included the early coin operated machines, the introduction of player-controlled flippers, followed by the electromechanical era, adding lights, sound, and more complex playfields. Then came the digital era where microprocessors were added, and now to the modern era that includes licensed themes, advanced physics and software driven rules.<sup><a href="#fn-1" id="fnref-1">1</a></sup> </p>
+      </div>
+      <div>
+        <figure>
+          <img src="assets/images/terminator-2-pinball.jpg" alt="">
+          <figcaption>Terminator 2: Judgment Day pinball machine (1991), designed by Steve Ritchie</figcaption>
+        </figure>
+      </div>
+    </div>
+
+    <p>Building a game that matches that of a full modern pinball machine would be unrealistic, so instead I aim to take the games main idea and features (coin activated ball-release mechanism, motorised elements, lighting, the spring plunger, point scoring, and a strategically designed playfield) and build a machine resembling the functioning of the earlier versions.</p>
+
+    <p>So the two main objectives for this project are:</p>
+    <ul>
+        <li>To construct a functional, engaging and visually appealing pinball-style game.</li>
+        <li>Built from recycled and salvaged materials whilst maintaining functionality, structural rigidity and long term durability.</li>
+    </ul>
+    <p>The plan for this project consisted of first researching existing designs of both commercial and bespoke pinball style games, and using them as inspiration, listing ideas for specific features I wanted to implement along with ideas for the playfield and machine housing design. Then, consolidating the features I wanted implemented, I identified how I plan to acquire the necessary materials and parts, and determined the high-level order of constructions based on the ways in which features and structures will depend on one another.</p>
+    
+    <h3>Inspiration</h3>
+    <p>I began by searching on the internet for images of commercial pinball machines and accumulating them into a mood board as shown in Figure 2.1, along with any examples of custom built designs I managed to find.</p>
+    <figure>
+      <div class="mood-board">
+        <img src="assets/images/machine-inspiration-1.png" alt="">
+        <img src="assets/images/machine-inspiration-7.png" alt="">
+        <img src="assets/images/machine-inspiration-4.png" alt="">
+        <img src="assets/images/machine-inspiration-2.png" alt="">
+        <img src="assets/images/machine-inspiration-3.png" alt="">
+        <img src="assets/images/machine-inspiration-8.png" alt="">
+        <img src="assets/images/machine-inspiration-5.png" alt="">
+        <img src="assets/images/machine-inspiration-6.png" alt="">
+        <img src="assets/images/machine-inspiration-9.png" alt="">
+        <img src="assets/images/machine-inspiration-10.png" alt="">
+        <img src="assets/images/machine-inspiration-11.png" alt="">
+        <img src="assets/images/machine-inspiration-12.jpg" alt="">
+        <img src="assets/images/machine-inspiration-13.jpg" alt="">
+        <img src="assets/images/machine-inspiration-14.jpg" alt="">
+      </div>
+
+      <figcaption>
+        <strong>Figure 2.1:</strong> Pinball inspiration board (sources: various online images and YouTube videos)
+      </figcaption>
+    </figure>
+    
+
+    <h3>Researching Game Engagement Theory</h3>
+    <p>To understand how I can achieve the objective of making the game engaging and immersive, I began researching and compiling a list of the principles of game design and engagement theory<sup><a href="#fn-4" id="fnref-4">4</a></sup> along with ideas for how I can implement them in the context of this project:</p>
+    <ol>
+      <li>Having an optimal balance between challenge and skill (flow state) - players are most engaged when a game is neither too easy (leading to boredom) nor to difficult (leading to frustration).<sup><a href="#fn-5" id="fnref-5">5</a></sup></li>
+        <ul>
+          <li>All playfield locations that yield points made difficult enough to make them challenging.</li>
+          <li>Optimal balance between places to gain points and places to lose points.</li>
+          <li>Ability to set a 'difficulty level' through varying the amount of points assigned to specific holes.</li>
+        </ul>
+      <li>Clear goals and feedback - players need to be clear on what they are trying to achieve and their progress in achieving it.<sup><a href="#fn-6" id="fnref-6">6</a></sup> </li>
+        <ul>
+          <li>Core goal will be to maximise the players score in a given amount of balls.</li>
+          <li>Locations and holes that gain or lose points made clear with markings and corresponding LED lighting.</li>
+          <li>Keeping track of score made effortless by using easy to count increments.</li>
+        </ul>
+      <li>Autonomy, competence, and relatedness (self-determination theory) - games need to satisfy three psychological needs: player choice and control, feelings of mastery and improvement, connection to others.<sup><a href="#fn-7" id="fnref-7">7</a></sup></li>
+        <ul>
+          <li>The player will have full control over ball manipulation using the flippers (autonomy).</li>
+          <li>Designing the playfield in such a way to incorporate strategy (competence).</li>
+          <li>Having a highscore visually displayed along with the corresponding players name to create competition and connection between players (relatedness).</li>
+        </ul>
+      <li>Immersion and fantasy - the ability for players to have a sense of being 'inside' the game.<sup><a href="#fn-4" id="fnref-4">4</a></sup> </li>
+        <ul>
+          <li>Structures, design, and lighting that matches the games theme.</li>
+          <li>Formulating a fictional storyline for the playfield design.</li>
+        </ul>
+      <li>Reward systems - rewards such as intrinsic satisfaction, points and achievements trigger motivation loops and encourages continued play. <sup><a href="#fn-8" id="fnref-8">8</a></sup> </li>
+        <ul>
+          <li>Point scoring system where specific locations and holes can increase or decrease the players score.</li>
+          <li>Having a select few location that are significantly more challenging to intrinsically motivate players.</li>
+          <li>Incorporating a level of randomness and unpredictability into the game through toggle gates and lane dividers.</li>
+        </ul>
+    </ol>
+    
+    <h3>The Theme</h3>
+    <p>To guide design decisions I decided on an 'ancient jungle' theme, as I believe its sense of mystery and adventure would be unique and suitable for a pinball machine whilst also being achievable to replicate in the user experience with color, texture and playfield structures.</p>
+    <p>I compiled another mood board to help me in forming and visualising design ideas as shown in Figure 2.2.</p>
+    <figure>
+      <div class="mood-board">
+          <img src="assets/images/theme-image-1.webp" alt="">
+          <img src="assets/images/theme-image2.jpeg" alt="">
+          <img src="assets/images/theme-image3.jpg" alt="">
+          <img src="assets/images/theme-image4.jpg" alt="">
+          <img src="assets/images/theme-image5.jpg" alt="">
+          <img src="assets/images/theme-image6.jpg" alt="">
+          <img src="assets/images/theme-image7.png" alt="">
+          <img src="assets/images/theme-image8.webp" alt="">
+          <img src="assets/images/theme-image9.png" alt="">
+      </div>
+      <figcaption><strong>Figure 2.2:</strong> Jungle theme inspiration board (sources: various online image and AI-generated images (using Adobe Firefly))</figcaption>
+    </figure>
+
+    <h3>Designing The Playfield</h3>
+  
+    <p>I started by listing any ideas I had. To help organise them I broke them down into 3 distinct types:</p>
+    <ol>
+      <li>Static elements (stationary structures)
+        <ul>
+          <li>Inlane bumpers</li>
+          <li>Temple structure</li>
+          <li>Ruins</li>
+          <li>Circular bumpers resembling large 'rocks'</li>
+          <li>Ramps</li>
+          <li>Scoring holes</li>
+          <li>Metal elevated rims</li>
+          <li>Curved guides at the corners</li>
+          <li>Various hidden ball tunnels</li>
+        </ul>
+      </li>
+
+      <li>Passive elements (have the ability to move)
+        <ul>
+          <li>The flippers</li>
+          <li>Spinning bumper</li>
+          <li>Trap doors in the floor</li>
+          <li>Mechanical lever for activation of an active element</li>
+          <li>Hanging gate</li>
+          <li>Toggle switch gate</li>
+        </ul>
+      </li>
+
+      <li>Active elements (electrically powered)
+        <ul>
+          <li>Vertically sliding temple door</li>
+          <li>Rotating door</li>
+          <li>LED strip lights in the walls, floor, tunnels, and temple</li>
+          <li>White LED strip floodlight to illuminate the arena</li>
+          <li>Sensor that opens a door or turns on lights</li>
+        </ul>
+      </li>
+    </ol> 
+    <p>Then I began visually brainstorming on a whiteboard how they can be approximately positioned to form a strategic playfield as shown in Figure 2.3. However, designing all playfield details in advance would be unrealistic as many elements will require experimental validation to prove adequate functioning such as trapdoors, motorised elements and the optimal positioning of structures relative to the launching directions of the flippers.</p>
+    
+    <figure>
+      <img src="assets/images/whiteboard-playfield-design.png" alt="">
+      <figcaption><strong>Figure 2.3:</strong> Whiteboard sketch idea of playfield design and machine housing</figcaption>
+    </figure>
+
+    <h3>Designing The Machine</h3>
+    <p>Similar to how I approached designing the playfield, I started forming a list of machine features I wanted to implement: </p>
+    <ul>
+      <li>A rectangular prism with a sloped top face to form the basic geometric structure and shape (see Figure 2.3)</li>
+      <li>A space behind the playfield to allow for hidden ball guides</li>
+      <li>Spring powered plunger to launch balls</li>
+      <li>Clear acrylic top</li>
+      <li>Magnetically removable side panel to provide access to interior</li>
+      <li>Coin operated ball-release mechanism</li>
+      <li>Ability to set two physical modes:</li>
+        <ol>
+          <li>Paid - where a coin is required to initiate the game</li>
+          <li>Free - the balls are always loaded in the plunger</li>
+        </ol>
+    </ul>
+
+    <h3>Sourcing Parts and Materials</h3>
+    <p>To determine what materials and parts will be required, I made a table of likely materials I will need for the project, how I plan to get them and the purpose they will serve.</p>
+
+    <table>
+      <caption>Table 1.1: Material sourcing and purpose</caption>
+      <tr>
+        <th>Materials</th>
+        <th>Purpose</th>
+        <th>Source</th>
+      </tr>
+      <tr>
+        <td>Cardboard</td>
+        <td>Primary building material: machine housing, and playfield structures</td>
+        <td>Salvaged from packaging</td>
+      </tr>
+      <tr>
+        <td>Wooden craft sticks</td>
+        <td>Aesthetic detailing, ensuring durability in critical regions (frequent ball impact locations) and mechanical parts requiring rigidity </td>
+        <td>Existing stock</td>
+      </tr>
+      <tr>
+        <td>PLA filament</td>
+        <td>3D printing for mechanical parts</td>
+        <td>Existing stock</td>
+      </tr>
+      <tr>
+        <td>Acrylic sheet</td>
+        <td>Machine top and playfield structures</td>
+        <td>Salvaged from an unused picture frame</td>
+      </tr>
+      <tr>
+        <td>5V-12V DC motors</td>
+        <td>Powering electromechanical mechanisms</td>
+        <td>Salvaged from an old printer and some existing stock</td>
+      </tr>
+      <tr>
+        <td>PWM controllers</td>
+        <td>Adjusting motor speed</td>
+        <td>Existing stock</td>
+      </tr>
+      <tr>
+        <td>DC-DC buck converter</td>
+        <td>Step down voltage for 5V components</td>
+        <td>Car USB charger</td>
+      </tr>
+      <tr>
+        <td>Wires</td>
+        <td>Connecting electronics</td>
+        <td>Salvaged from damaged decorative lighting</td>
+      </tr>
+      <tr>
+        <td>Elastic bands</td>
+        <td>Mechanising flippers and other mechanical parts</td>
+        <td>Existing stock</td>
+      </tr>
+      <tr>
+        <td>LED strip lights</td>
+        <td>Playfield lighting</td>
+        <td>Existing stock (offcuts)</td>
+      </tr>
+      <tr>
+        <td>Steel ball bearings</td>
+        <td>Pinballs</td>
+        <td>Unused marble set</td>
+      </tr>
+      <tr>
+        <td>MDF board</td>
+        <td>Hard material for areas requiring rigidity</td>
+        <td>Salvaged from packaging</td>
+      </tr>
+      <tr>
+        <td>Wooden sticks</td>
+        <td>Flipper axis rotation and mechanical parts</td>
+        <td>Plant stakes and skewers</td>
+      </tr>
+      <tr>
+        <td>Springs</td>
+        <td>Plunger and mechanical parts</td>
+        <td>Salvaged from old printer</td>
+      </tr>
+      <tr>
+        <td>Steel wire</td>
+        <td>Playfield ball guide rails</td>
+        <td>Steel coat hangers</td>
+      </tr>
+    </table>
+</section>
+
+<section id="c3">
+  <h2>Chapter 3: Preparing The Workshop (shed)</h2>
+  <p>Before starting construction on the project, I need a suitable workstation, so I spent a few days organising the shed and transforming it into this projects 'making studio'.</p>
+  <p>In doing so, I also made a work bench from scrap wood to form the main working surface which can be seen in Figure 3.3.</p>
+  <figure class="centre medium">
+    <img src="assets/images/shed1.png"  alt="">
+    <figcaption><strong>Figure 3.1:</strong> Initial state of the shed</figcaption>
+  </figure>
+  <figure class="centre medium">
+    <img src="assets/images/shed2.png"  alt="">
+    <figcaption><strong>Figure 3.2:</strong> Emptied shed</figcaption>
+  </figure>
+  <figure class="centre medium">
+     <img src="assets/images/shed3.png"  alt="">
+     <figcaption><strong>Figure 3.3:</strong> Complete shed transformation and work station</figcaption>
+  </figure>
+</section>
+
+<section id="c4">
+  <h2>Chapter 4: It Started Simple</h2>
+  <div class="row split-50">
+    <div>
+      <p>The first step was to cut out the side walls and floor pieces along with constructing the top frame that will hold the acrylic sheet, as shown Figure 4.1. To ensure right angle corners and straight edges, a set square was used along with a 50cm steel ruler.</p>
+    </div>
+    <div>
+      <figure>
+        <img src="assets/images/box-pieces.png" alt="">
+        <figcaption><strong>Figure 4.1:</strong> Machine box enclosure panels</figcaption>
+      </figure>
+    </div>
+ 
+  </div>
+  <p>After that was complete, I began work on the playfield.</p>
+  <p>Starting with the flippers, to design their shape I used a compass to sketch two circles (one being half the diameter of the other) and connecting them together. Then I used the first cardboard cut out as a stencil to accurately and consistently repeat the design. Finally I attached two pieces together to form a single flipper using hot glue as shown in Figure 4.2.</p>
+  
+  <figure class="medium">
+    <img src="assets/images/flippers.png" alt="">
+    <figcaption><strong>Figure 4.2:</strong> Cardboard flippers</figcaption>
+  </figure>
+
+  <p>With that complete I had to decide the precise flipper location on the playfield as this will influence difficulty and ball launch direction. This included both:</p>
+  <ol>
+  <li>The angle of the flippers, and</li>
+  <li>The distance between them</li>
+  </ol> 
+  <p>I was unable to find any sources on the internet for flipper orientation so instead I analysed the flipper positioning and angle from several images using digital protractor and ruler tools. I determined that the most common flipper angle was 30°-35° to the horizontal, moving through an arc of approximately 50°, and there spacing is usually just greater than the playing ball diameter when the flippers are closest together. So using a pencil I marked out the flipper locations on the playfield along with roughly sketching the positions of potential structures. Then I moved onto the flipper mechanism.</p> <!--add research about flipper angles and placement-->
+  <p>Taking inspiration from the cardboard flipper mechanisms shown previously in Figure 2.1, I made the actuation buttons by glueing four cardboard rectangles, attached a wooden pin to each flipper for the axis of rotation along with a rectangular piece of cardboard on the underside to transfer the rotating motion. Then I made the button housing on the underside of the playfield, and after a few iterations of elastic band placement, I found the best approach to be individually returning the flipper and button using separate elastic bands. The final design can be seen demonstrated in Figure 4.3.</p>
+
+  <figure>
+    <video src="assets/videos/flipper-mechanism.mp4" controls poster="assets/images/flipper-mechanism1.png"></video>
+    <figcaption><strong>Figure 4.3:</strong> Demonstration of the working flippers and mechanism (video link: <a href="https://youtu.be/SrDKsmADfU8" target="_blank">https://youtu.be/SrDKsmADfU8</a>)</figcaption>
+  </figure>
+  <p>The flippers simply work by the sliding actuator buttons rotating the rectangular piece attached to each flipper rod which transfers the motion to the flippers.</p>
+  <p>A crucial factor I had to consider when making the mechanism was the point of contact between the buttons and the rotating pieces:</p>
+  <ul>
+    <li>Too far down the rectangular piece, and there will be too little rotation and therefore not enough force to redirect balls</li>
+    <li>Too high up, and there will be too much rotation and the flippers would get stuck</li>
+  </ul>
+  <p>So it took several iterations of the button housing placement to get the optimal rotation amount.</p>
+
+  <p>Finally, I glued the machine enclosure panels together as shown in Figure 4.5, leaving one side unattached as I plan to make the machine in two separate parts (the playfield, and machine enclosure) for ease of construction and at the end when the final design is complete, permanently attach the two together.</p>
+<figure>
+  <img src="assets/images/box.png" alt="">
+  <figcaption><strong>Figure 4.5:</strong> Partial machine enclosure assembly</figcaption>
+</figure>
+</section>
+
+<section id="c5">
+  <h2>Chapter 5: An Engineering Challenge</h2>
+  <p>Then came the design of the ball release mechanism - arguably the part I was most interested in, but also significantly more complex than I initially anticipated.</p>
+
+  <p>I began by clearly defining the objective:</p>
+  <p class="indent">A coin-based mechanism that releases balls into the plunger only when the correct coin (£2) is inserted, while also allowing a 'free mode' in which the system can be set to bypass coin validation.</p>
+  
+  <p>To achieve coin validation, my idea was to use precisely cut slots (just smaller that the width and diameter of a £2 coin) positioned on a sloped ramp which should only allow the accepted £2 coin to roll past as its the largest, and all others to drop into a rejection box.</p>
+  <figure>
+    <video src="assets/videos/coin-ramp.mp4" controls poster="assets/images/coin-ramp-poster.png"></video>
+    <figcaption><strong>Figure 5.1:</strong> Coin validation ramp demonstration (video link: <a href="https://youtu.be/DhjIE1uHjRQ" target="_blank">https://youtu.be/DhjIE1uHjRQ</a>)</figcaption>
+  </figure>
+  <p>The ramps functioning can be seen demonstrated in Figure 5.1. I used digital calipers to measure the widths and diameters of all the coins, then to cut the holes I used the distance up to half the diameter between the second largest coin and the £2 coin (and the same for the width). Due to the micrometer precision that was necessary, I cut the openings from an MDF board which is a much harder material than cardboard, allowing for highly accurate coin slots to be achieved.</p>
+
+  <div class="row split-50">
+    <div>
+      <figure>
+      <img src="assets/images/mechanism-sketch.png" alt="">
+      <figcaption><strong>Figure 5.2:</strong> Initial sketch of the ball release mechanism design</figcaption>
+      </figure>
+    </div>
+    <div>
+      <p>Then I moved onto the mechanism itself. I came up with the idea to release the balls using a rectangular platform containing a hole that can slide beneath a vertical ball magazine. The £2 coin would effectively 'extend' a pushbutton allowing for the platform to be pushed forward, lining up its hole with the ball magazine, and enabling the balls to drop down. The initial sketch of this idea can be seen in Figure 5.2.</p>
+    </div>
+  </div>
+
+  <p>To allow the mechanism to be set on the 'free mode' bypassing the need for the coin, I added rotating latches to the sliding platform which enabled it to be held in place in the extended position. However after completing the sliding platform as shown in Figure 5.3, the latches exhibited excessive flex and where therefore unreliable.</p>
+  <figure class="medium">
+    <img src="assets/images/platform.png" alt="">
+    <figcaption><strong>Figure 5.3:</strong> Ball release mechanism first design of sliding platform</figcaption>
+  </figure>
+  <p>For the second iteration of the sliding platform I added a lever on the underside that can be latched into a recess, holding the platform in place. This can be seen in the completed design in Figure 5.5.</p>
+  
+  <p>After approximately three hours, I had completed the initial prototype of the ball release mechanism as shown in Figure 5.4 and Figure 5.5 where:</p>
+  <ol>
+    <li>A pushbutton when pressed moves freely into a coin space and returns passively using an elastic band</li>
+    <li>When a coin is present in the coin space and the pushbutton is pressed, it causes the sliding platform to also be pushed</li>
+    <li>The platforms hole vertically lines up with the ball magazine and the balls drop down</li>
+    <li>When the pushbutton is released, the coin drops into a collection box and the platform returns to its resting position using elastic bands</li>
+  </ol>
+  <figure>
+    <img src="assets/images/mechanism-3.png" alt="">
+    <figcaption><strong>Figure 5.4:</strong> Top view of ball release mechanism</figcaption>
+  </figure>
+  <figure>
+    <img src="assets/images/mechanism-1.png" alt="">
+    <figcaption><strong>Figure 5.5:</strong> Underside view of ball release mechanism</figcaption>
+  </figure>
+  <p>However after testing the mechanism, several issues have surfaced so I began the iterative process of solving each sequentially.</p>
+
+  <div class="process">
+    <div class="step">
+      <div>
+        <p>The hole in the platform was slightly misaligned causing the balls to drop without the coin also dropping</p>
+      </div>
+      <div>
+        <p>To solve this I remade the ramp ensuring the hole was precisely positioned so that the moment the coin dropped the balls would also drop</p>
+      </div>
+    </div>
+    <div class="step">
+      <div>
+        <p>Due to there being a constant force also acting on the coin from the sliding platform, the coin would frequently not drop down due to being pushed back </p>
+      </div>
+      <div>
+        <p>I came up with the idea to adjust the angle of the wooden craft stick secured to the sliding platforms point of contact with the coin, so that instead of the force acting horizontally, it acted at an angle, pushing the coin downward and into the collection box </p>
+      </div>
+    </div>
+    <div class="step">
+      <div>
+        <p>If the user performed a quick press on the pushbutton only a fraction of the balls would drop down due to the sliding platform returning instantly</p>
+      </div>
+      <div>
+        <p>My initial plan was to add two guides beside the platform to create just enough friction to slow down the return. Although it worked, this solution resulted in inconsistent returns and was unreliable as the amount of friction would fluctuate over time.</p>
+        <p>Then once I had installed the mechanism I replaced the friction design with a latching tab (made from a wire) and grove which can be seen in Figure 5.6. The platform slider would snap into the latching tab and return after a suitable delay. This method proved to much more reliable and consistent.</p>
+      </div>
+    </div>
+  </div>
+  <figure class="medium">
+    <img src="assets/images/latching-tab-solution.png" alt="">
+    <figcaption><strong>Figure 5.6:</strong> Latching tab and groove of the ball release platform</figcaption>
+  </figure>
+
+  <p>Now with the working mechanism complete I began installing it into the machine enclosure along with the coin collection box, coin validation ramp and coin rejection compartment which can be seen in Figures 5.7 and 5.8.</p>
+  <div class="img-row">
+    <figure>
+      <img src="assets/images/installed-ball-mechanism.png" alt="">
+      <figcaption><strong>Figure 5.7:</strong> The installed ball-release mechanism and coin validation</figcaption>
+    </figure>
+    <figure>
+      <img src="assets/images/coin-rejection-compartment.png" alt="">
+      <figcaption><strong>Figure 5.8:</strong> Front view of machine enclosure showing the coin slot, rejection compartment and pushbutton</figcaption>
+    </figure>
+  </div>
+
+ 
+  <p>Finally to complete the system, I built the plunger and the launch ramp as shown in Figure 5.9, and the whole working system demonstration can be seen in Figure 5.10.</p>
+  <figure>
+    <img src="assets/images/launch-ramp.png" alt="">
+  <figcaption><strong>Figure 5.9:</strong> The launch ramp and plunger</figcaption>
+  </figure>
+  <figure>
+    <video src="assets/videos/ball-release-system.mp4" poster="assets/images/ball-release-system-cover.png" controls></video>
+    <figcaption><strong>Figure 5.10:</strong> Ball-release system demonstration (video link: <a href="https://youtu.be/FvdhHAMP2-o" target="_blank">https://youtu.be/FvdhHAMP2-o</a> )</figcaption>
+  </figure>
+  
+<section id="c6">
+  <h2>Chapter 6: Doubling The Flippers</h2>
+  <p>Whilst I was thinking about where other structures and features would be positioned on the playfield, I had the idea to potentially add a further two flippers to the game, this would not only make it more strategic by adding a further element the player could manipulate but it would also allow the ball to be propelled from other locations meaning I can make the structures and therefore playfield considerably more complex.</p>
+  <p>As this would affect how I will proceed with designing the whole game, the time to decide whether I should implement dual flippers was now. After a few minutes of contemplation I decided the benefits outweighed the risks (mainly being the additional complexity risking the mechanisms smoothness of use).</p>
+
+  <div class="row split-50">
+    <div>
+      <p>I started by making an additional two flippers with the same method as before and then began adapting the current mechanism to enable the motion from the first flipper to transfer its rotation to the second as shown in Figure 6.1. </p>
+      <p>The change in the functioning of the actuator button from connecting the second flipper turned out to be negligible. As I plan for the other additional flipper to be located on the second level I will complete the right flipper mechanism once the upper level is installed and the flippers position is clear.</p>
+    </div>
+    <figure>
+      <img src="assets/images/dual-flipper-mechanism.png" alt="">
+      <figcaption><strong>Figure 6.1:</strong> Dual flipper mechanism for the left flipper</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section id="c7">
+  <h2>Chapter 7: The Birth of The Circuit</h2>
+  <p>Next I moved onto the electrical circuit and the first step was to identify how the machine will be powered. The main considerations in making this decision will be:</p>
+  <ul>
+    <li>Current: the rated current of the power supply must be above the total maximum consumption of the lights and motors<sup><a href="#fn-9" id="fnref-9">9</a></sup>, and</li>
+    <li>Voltage: the voltage supplied needs to match what is required by the components<sup><a href="#fn-9" id="fnref-9">9</a></sup></li>
+  </ul>
+    <p>The few potential sources I had access to included: AA batteries, 18V drill battery, 12V drill battery and a 7.4V 18650 Li-ion battery from an electric water gun.</p>
+
+  <div class="row split-50">
+    <div>
+      <p>As the highest voltage that would be needed is 12V (for the LED strip lights) it would be ideal to have a 12V power source, and for all the other components using 5V, a DC-DC buck converter can be used to step down the voltage which I can salvage from inside a USB car charger (an example can be seen in Figure 7.1) which conveniently will convert 12V to 5V.</p>
+      <p>Therefore I decided the 12V drill battery (2A), shown in Figure 7.2, would be most suitable for the machine as not only does it provides the ideal voltage for the DC-DC buck converter but connecting it into the circuit should be relatively straight forward due to the metal contacts.</p>
+    </div>
+    <div>
+      <figure>
+        <img src="assets/images/buck_converter.avif" alt="">
+        <figcaption><strong>Figure 7.1:</strong> USB car plug (source: Screwfix, Ring RMS23 2 Outlet Type A USB In-car Charger)</figcaption>
+      </figure>
+    </div>
+  </div>
+
+  <figure class="medium">
+    <img src="assets/images/12v-drill-battery.png" alt="">
+    <figcaption><strong>Figure 7.2:</strong> 12V drill battery</figcaption>
+  </figure>
+
+  <div class="row split-50">
+    <div>
+      <p>Now with the power source selected, I began working on how to connect the battery to the circuit. My plan was to replicate something similar to how the battery snaps into its drill compartment which can be seen in Figure 7.3.</p>
+    </div>
+    <div>
+      <figure>
+        <img src="assets/images/battery-drill-compartment.png" alt="">
+        <figcaption><strong>Figure 7.3:</strong> Drill battery compartment</figcaption>
+      </figure>
+    </div>
+  </div>
+
+  <p>After approximately two hours and a few iterations, I managed to build the battery compartment as shown in Figure 7.4 out of some cardboard, wooden craft sticks and nickle plated steel contacts I salvaged from an old battery pack, soldered to some wries. On the first iteration I had used 1.5mm aluminum plates I salvaged from an angle bracket and although it worked, after some research I had found aluminum would oxidize too easily<sup><a href="#fn-10" id="fnref-10">10</a></sup> and this would not be a long term solution, so instead I replaced them with the much more reliable nickle plated steel contacts.</p>
+  <figure class="medium">
+    <img src="assets/images/battery_compartment.png" alt="">
+    <figcaption><strong>Figure 7.4:</strong> Battery compartment with attached wires</figcaption>
+  </figure>
+
+  <p>To test the connections and circuit I soldered the wires to the buck converter and plugged in a USB color changing LED strip I salvaged from an old frame display, this can be seen in Figure 7.5.</p>
+  
+  <figure>
+    <img src="assets/images/usb-lights-powered.png" alt="">
+    <figcaption><strong>Figure 7.5:</strong> Successful test of the battery, buck converter and LED strip light circuit</figcaption>
+  </figure>
+
+  <p>Now with a functional circuit to supply power I began working on the vertically sliding door that will eventually be installed at the entrance of the temple structure. </p>
+  <div class="row split-50">
+    <div>
+      <p>My plan was to use a small geared DC motor I had available to transfer its rotating motion into a linear oscillating movement. By implementing a crank and slider linkage mechanism<sup><a href="#fn-11" id="fnref-11">11</a></sup> into a cardboard housing I build for the sliding door as shown in Figure 7.6, I was able to achieve the desired reciprocating motions as demonstrated in Figure 7.7.</p>
+    </div>
+    <div>
+      <figure>
+        <img src="assets/images/vertically-sliding-door.png" alt="">
+        <figcaption><strong>Figure 7.6:</strong> Vertically sliding door housing</figcaption>
+      </figure>
+    </div>
+  </div>
+  <figure>
+    <video src="assets/videos/vertically-sliding-door-demonstration.mp4" poster="assets/images/vertically-sliding-door-cover.png" controls></video>
+    <figcaption><strong>Figure 7.7:</strong> Demonstration of vertically sliding door (video link: <a href="https://youtu.be/0UYLbgbsMo8" target="_blank">https://youtu.be/0UYLbgbsMo8</a>)</figcaption>
+  </figure>
+</section>
+
+<section id="c8">
+  <h2>Chapter 8: Playfield Construction Begins</h2>
+  <p>I started by making the outlane guides beneath the flippers as shown in Figure 8.1, in which I embedded acrylic sheet panels with the idea that later I can illuminate informational cards containing rules and instructions using white LED strip lights from underneath.</p>
+  <figure>
+    <img src="assets/images/ball-guide.png" alt="">
+    <figcaption><strong>Figure 8.1:</strong> Outlane guides with embedded acrylic sheets</figcaption>
+  </figure>
+  <p>I then began externally making most of the playfield elements I was planning to implement which can be seen in Figures 8.2 and 8.3, this included bumpers, a spinner, temple pillars, and ramps.</p>
+  <div class="img-row">
+    <figure>
+      <img src="assets/images/playfield-elements.png" alt="">
+      <figcaption><strong>Figure 8.2:</strong> Playfield elements</figcaption>
+    </figure>
+    <figure>
+      <img src="assets/images/playfield-elements-2.png" alt="">
+      <figcaption><strong>Figure 8.3:</strong> Playfield bumpers</figcaption>
+    </figure>
+  </div>
+  
+  <p>Initially the inlane bumpers that guided balls into the flippers were made entirely out of cardboard, but later I had the idea to replace the bumper side with offcuts I had kept from an LED light diffuser channel. This would not only provide the balls with the classic elastic deflection but it would allow me to insert LED strip lights inside the bumpers to illuminate the diffusers which should considerable increase the aesthetics of the game. I then proceeded to mount the bumpers along with their LED strip beside each flipper as shown in Figure 8.4. To hold the playfield in the machine housing I added tabs on each wall on which the playfield can be placed.</p>
+  <figure class="medium">
+    <img src="assets/images/flipper-bumpers.png" alt="">
+    <figcaption><strong>Figure 8.4:</strong> Installed flipper bumpers</figcaption>
+  </figure>
+
+  <div class="row split-50">
+    <div>
+      <p>Next I moved onto constructing the temple structure. I roughly sketched out the temple location and after verifying a ball could be launched inside, I installed the vertically sliding door and glued on the pillars as shown in Figure 8.5. I also had the idea to replace the floor covering the door mechanism with a flush layer of acrylic sheet allowing visibility of the arguably elegant mechanism which I later also plan to illuminate with LED lights.</p>
+    </div>
+    <div>
+      <figure>
+        <img src="assets/images/temple-door-instalment.png" alt="">
+        <figcaption><strong>Figure 8.5:</strong> Temple pillars and door installment</figcaption>
+      </figure>
+    </div>
+  </div>
+
+  <div class="row split-50">
+    <div>
+      <figure>
+      <img src="assets/images/door-activation-first-iteration.png" alt="">
+      <figcaption><strong>Figure 8.6:</strong> Contact plate ramp door activation design</figcaption>
+      </figure>
+    </div>
+    <div>
+      <p>I thought a 'hidden' opening between two pillars would make an ideal location to have an activating mechanism for another door I planned to incorporate on the back panel. My initial plan was to have the ball roll onto a ramp (as shown in Figure 8.6) which, due to its weight, would push down on two metal contacts, briefly allowing current to flow and spinning the doors motor. However after testing, it quickly came apparent that the weight of a moving ball was insufficient to cause the metal contacts to touch. I tried to resolve this by adding an angled craft stick end piece hoping it would push the ball down into the ramp but that did not work either. As this was tested in a place that would be hidden away regardless (intentionally), I removed the ramp and moved on to the next task.</p>
+    </div>
+  </div>
+  <p>To add an element of randomness to the game, a ball that has successfully entered the temple structure will exit from one of three location: </p>
+  <ol>
+    <li>the ball is lost and makes its way back to the ball-release mechanism.</li>
+    <li>comes out the left side of the temple.</li>
+    <li>comes out near the flippers out the playfield.</li>
+  </ol>
+  <p>To achieve this I installed a ramp with openings (for outcome 1) as shown in Figure 8.7, leading to the opening behind the back panel where two sloped ramps will begin as shown in Figure 8.8, one leading to outcome 2, and the other to outcome 3. </p>
+  <div class="img-row" >
+    <figure>
+      <img src="assets/images/temple-ramp.png" alt="">
+      <figcaption><strong>Figure 8.7:</strong> Temple ramp</figcaption>
+    </figure>
+    <figure>
+      <img src="assets/images/temple-exit-ramps.png" alt="">
+      <figcaption><strong>Figure 8.8:</strong> Concealed temple ball pathways</figcaption>
+    </figure>
+  </div>
+  <div class="row split-50">
+    <div>
+      <p>I had the idea to locate the other door on the back playfield panel that leads the ball under the playfield and back out from an opening as that will allow me to also connect the left ramp in Figure 8.8  (outcome 3) to the door tunnel. I first installed the entry ramp, then proceeded to cut out the opening for the door as shown in Figure 8.9.</p>
+    </div>
+    <div>
+      <figure>
+        <img src="assets/images/entry-ramp-installment.png" alt="">
+        <figcaption><strong>Figure 8.9:</strong> Opening cutout and entry ramp instalment</figcaption>
+      </figure>
+    </div>
+  </div>
+  <p>For the door I used a semicircle cardboard cutout attached to a DC motor, blocking the opening as shown in Figure 8.10.</p>
+  <figure class="small">
+    <img src="assets/images/initial-rotating-door-design.png" alt="">
+    <figcaption><strong>Figure 8.10:</strong> Rotating door design</figcaption>
+  </figure>
+</section>
+
+<section id="c9">
+  <h2>Chapter 9: The Idea That Changes Everything</h2>
+  <p>A speaker that I found from an old computer gave me the idea to integrate background music into the machine and enhance the user experience. After doing some research on the internet of how this would be achieved, I found a DFPlayer module was required which is a small MP3 circuit board that sends audio to the speaker from a connected SDcard.<sup><a href="#fn-12" id="fnref-12">12</a></sup></p>
+  <p>However in doing this research I had the idea to potentially take this a step further and fully integrate electronics into the game (such as sensor based scoring, a fully interactive OLED user interface, and real-time audio feedback). Although this would increase the projects complexity I believe it would substantially improve the gameplay experience by incorporating immersive audio and an automated scoring system and therefore ensure the objective of building an engaging game is met. So I began researching the electrical components that will be required. Unfortunately this would mean the project would not completely meet the objective of being built entirely from recycled materials but I concluded the magnitude of improvement that a few bought components would make to the machine was justified.</p>
+  <p>For the ball-detection scoring system, an active infrared obstacle sensor proved to be the superior choice for this application due to its compact size, high precision and fast detection speed.<sup><a href="#fn-13" id="fnref-13">13</a></sup> For the display I selected the SSD1306 OLED module because of its high contrast which should accurately match the games aesthetics.<sup><a href="#fn-14" id="fnref-14">14</a></sup> And lastly I went with an Arduino Uno for the microcontroller<sup><a href="#fn-15" id="fnref-15">15</a></sup> which is arguably the best for simple input-output implementations.<sup><a href="#fn-16" id="fnref-16">16</a></sup> I managed to find all the necessary components on Aliexpress along with the DFPlayer and placed an order giving so far the projects cost to a total of approximately 9£.</p>
+  <p>However, I want to still minimise any additional expenditure in order to see how much of the machine can be made using reclaimed materials, so I will still be salvaging any electrical parts required such as resistors, transistors and capacitors from the motherboards of an old TV and Computer.</p>
+</section>
+
+  <section id="c10">
+    <h2>Chapter 10: Layering Up</h2>
+    <p>To maximise the playfield area and add aesthetic depth to the game, I plan for there to be a further two levels the ball can go. The second level will be located roughly on the upper right-hand side of the playfield as this will allow the upper left flipper to propel a ball up a ramp to the second level on which the upper-right flipper will be located allowing the player to further manipulate the ball to either the third level or several other places. After some brainstorming and sketching, I had a design in mind so I began externally constructing the structure in order to make sure the design was functional before attaching permanently into place.</p>
+    <div class="img-row">
+      <figure>
+        <img src="assets/images/second-layer.png" alt="">
+        <figcaption><strong>Figure 10.1:</strong> Second level structure</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/images/under-second-layer.png" alt="">
+        <figcaption><strong>Figure 10.2:</strong> Underside view of second level structure</figcaption>
+      </figure>
+    </div>
+    <p>As shown in Figure 10.1 and Figure 10.2, the structure contains two scoring holes a ball can drop into, the ramp to the third level and, now with the ability to use IR sensors, I have added a back lane where the ball can roll down and activate a sensor, opening the rotating door that was installed earlier.</p>
+    <div class="row split-50">
+      <div>
+        <p>I then started working on the third level which will be made entirely out of an acrylic sheet (allowing for clear visibility of the level bellow) and I plan for it to lead into a toggle gate randomiser that guides the balls into one of two rails. One leading into the second layer of the temple and up a ball elevator. A few iterations later and the third level was complete which can be seen in Figure 10.3. Once the sensor is installed and working, I can glue the structure permanently into position.</p>
+      </div>
+      <div>
+        <figure>
+          <img src="assets/images/second-layer-in-place.png" alt="">
+          <figcaption><strong>Figure 10.3:</strong> Second and third level structure dry fit</figcaption>
+        </figure>
+      </div>
+    </div>
+    <p>I have also installed the USB LED strip to both sides of the ball launch side panel. The installment process of the lighting on the plunger side can be seen in Figure 10.4.</p>
+    <figure>
+      <img src="assets/images/ball-launch-lighting.png" alt="">
+      <figcaption><strong>Figure 10.4:</strong> Instalment of LED lights on ball launch side panel</figcaption>
+    </figure>
+  </section>
+
+  <section id="c11">
+    <h2>Chapter 11: Arrival Of The Electronics</h2>
+    <figure>
+      <img src="assets/images/electronics-arrival.png" alt="">
+      <figcaption><strong>Figure 11.1:</strong> Unopened packages of electronics order </figcaption>
+    </figure>
+    <p>Now that the electronics have arrived I will focus on wiring and testing each electrical system (audio, OLED display, IR sensors, the transistor activated door, and button input) before making any further advances with the machine.</p>
+    <p>Before starting on the electronics, I read chapters 1-3 of a recommend book called Practical Electronics<sup><a href="#fn-17" id="fnref-17">17</a></sup> to get a foundational understanding of the fundamental electronic concepts such as series and parallel, voltage, current, and ohms law.</p>
+    <p>I also watched several YouTube video to understand how to use the Arduino Uno microcontroller.<sup><a href="#fn-18" id="fnref-18">18</a></sup></p>
+    
+    <p>Starting with the speaker (see Figure 11.2) my initial plan was to expose the 3 wires inside an audio AUX cable and solder them to the DFPlayer as shown in Figure 11.3 and then plug the cable into the speaker. However after several hours of trial and error the most I could get were popping sounds. </p>
+     
+    <div class="img-row">
+      <figure>
+        <img src="assets/images/salvaged-speaker.png" alt="">
+        <figcaption><strong>Figure 11.2:</strong> Salvaged speaker</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/images/DFPlayer-interation-1.png" alt="">
+        <figcaption><strong>Figure 11.3:</strong> AUX cable wires soldered to DFPlayer</figcaption>
+      </figure>
+    </div>
+    <div class="row split-50">
+      <div>
+        <p>As there could have been numerous sources of error (wiring, insufficient power, hardware, a faulty speaker, etc) I decided to attempt the more common method of connecting the DFPlayer to a small 3w speaker<sup><a href="#fn-19" id="fnref-19">19</a></sup> which I managed to salvage from an unused electronic book toy as seen in Figure 11.4 (along with a small N20 DC motor which may potentially be of use later on).</p>
+      </div>
+      <div>
+        <figure>
+          <img src="assets/images/book-toy.png" alt="">
+          <figcaption><strong>Figure 11.4:</strong> Electronic book containing a speaker and small motor</figcaption>
+        </figure>
+      </div>
+    </div>
+    
+  
+    <p>After soldering the speaker to the DFPlayer as shown in Figure 11.5, I managed to successfully get the audio playing as demonstrated in Figure 11.6.</p>
+    <div class="row split-50">
+      <div>
+        <figure>
+        <img src="assets/images/soldered-DFPlayer.png" alt="">
+      <figcaption><strong>Figure 11.5:</strong> Speaker circuit</figcaption>
+      </div>
+      <div>
+        <figure>
+        <video src="assets/videos/audio-circuit-video.mp4" poster="assets/images/audio-circuit-cover.png" controls></video>
+        <figcaption><strong>Figure 11.6: </strong> Working speaker-DFPlayer circuit (video link: <a href="https://youtu.be/6aoskB_tVGs" target="_blank">https://youtu.be/6aoskB_tVGs</a> </figcaption>
+      </figure>
+      </div>
+    </figure>
+    </div>
+  
+  
+    <div class="row split-50">
+      <div>
+        <p>Displaying graphics on the OLED module as shown in Figure 11.7 was relatively straight forward. I connected the 4 pins to the Arduino board drawing on a highly informative article<sup><a href="#fn-20" id="fnref-20">20</a></sup> which not only mapped the connections clearly but also outlined how to use the Adafruit_GFX<sup><a href="#fn-21" id="fnref-21">21</a></sup> and Adafruit_SSD1306<sup><a href="#fn-22" id="fnref-22">22</a></sup> library which is pre-written code for the arduino program that handles how to send graphics to the display. </p>
+    
+      </div>
+      <div>
+        <figure>
+          <img src="assets/images/oled-display.png" alt="">
+          <figcaption><strong>Figure 11.7:</strong> Working OLED display module</figcaption>
+        </figure>
+      </div>
+    </div>
+
+    <p>Then came the lengthiest and most painstaking iteration phase: the sensors.</p>
+    <p>The plan was to position the sensors in such a way where they would detect a ball rolling inside a cardboard guide. However the challenge in this was that due to the curvature of the steel balls and that IR sensors work by detecting reflected waves, the rolling balls have to be precisely positioned on each pass to successfully reflect the waves into the receiver of the sensor.</p>
+    <p>First I began by ensuring the sensors where able to detect close objects by powering the module and using the potentiometer (which can be seen in Figure 11.8) to adjust its sensitivity. Then came a whole day of trying various sensor positioning and orientation on the ball channel. Overall the main iterations included overhead, side-mounted, eye level and finally the design that showed consistent readings was mounting the sensor underneath a layer of plexiglass as shown in Figure 11.9.</p>
+      
+    <div class="img-row">
+      <figure>
+        <img src="assets/images/IR-sensor.png" alt="">
+        <figcaption><strong>Figure 11.8:</strong> IR sensor</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/images/IR-sensor-ball-detection.png" alt="">
+        <figcaption><strong>Figure 11.9:</strong> Successful design of sensor ball detection</figcaption>
+      </figure>
+    </div>
+    
+  
+    <p>Another system that took considerable trial and error was the transistor-motor circuit. After trying various different salvaged transistors, I managed to successfully control the motor using digital signals from the Arduino as demonstrated in Figure 11.10. I also added a diode in parallel with the motor to protect sensitive components<sup><a href="#fn-23" id="fnref-23">23</a></sup> as it will be powered using the 5V power rails.</p>
+    <figure class="medium">
+      <video src="assets/videos/motor-transistor-video.mp4" poster="assets/images/motor-transistor-cover.png" controls></video>
+      <figcaption><strong>Figure 11.10:</strong> Working motor-transistor circuit (video link: <a href="https://youtu.be/4oh8Wpl1GuE" target="_blank">https://youtu.be/4oh8Wpl1GuE</a>)</figcaption>
+    </figure>
+    <div class="row split-50">
+      <div>
+        <p>Lastly to receive user input I salvaged a push button from an old monitor button circuit board which can be seen in Figure 11.11, soldered two wires to the terminals as shown in Figure 11.12, and after a brief test I had a working method of user input. However the button alone is quite inconvenient to press so I later plan to design and 3d print a button cover to make it more user friendly.</p>
+      </div>
+      <div>
+        <figure>
+          <img src="assets/images/salvaged-button.png" alt="">
+          <figcaption><strong>Figure 11.11:</strong> Monitor Button circuit board</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/images/soldered-button.png" alt="">
+          <figcaption><strong>Figure 11.12:</strong> User input button</figcaption>
+        </figure>
+      </div>
+    </div>
+      
+    <p>Now that all the individual circuits have been successfully built, I can move onto the second major engineering challenge of this project.</p>
+      
+    
+
+
+  </section>
+
+  <section id="c12">
+    <h2>Chapter 12: The Ball Elevator</h2>
+    <p>Before identifying and building a mechanism to electromechanical raise a ball, I needed to first attached the additional levels to the playfield and complete the temple structure.</p>
+    
+    <div class="row split-60-40">
+      <div>
+        <p>So after integrating a sensor with the second level as shown in Figure 12.1 and confirming consistent detection, I permanently glued the structure into place as demonstrated in Figure 12.2 and attached this levels flipper. </p>
+        <figure>
+          <video src="assets/videos/attaching-second-layer.mp4" poster="assets/images/attaching-second-layer-cover.png" controls></video>
+          <figcaption><strong>Figure 12.2:</strong> Attaching the second and third levels to the playfield (video link: <a href="https://youtu.be/uL5DTq9BfsY" target="_blank">https://youtu.be/uL5DTq9BfsY</a>)</figcaption>
+        </figure>
+      </div>
+      <div>
+        <figure>
+          <img src="assets/images/second-layer-sensor.png" alt="">
+          <figcaption><strong>Figure 12.1:</strong> Second level mounted sensor</figcaption>
+        </figure>
+      </div>
+    </div>
+  
+    <p>I then began finishing the main temple structure using the reference images from Figure 2.2 for guidance on the design. The temples second level and roof will be made separate and detachable (using magnets) in order to provide easy access for maintenance and sensor sensitivity adjustment. The development of the temple structure and design can be seen in Figures 12.3, 12.4 and 12.5.</p>
+    <figure>
+      <img src="assets/images/temple1.png" alt="">
+      <figcaption><strong>Figure 12.3:</strong> Designing second level of temple</figcaption>
+    </figure>
+    <figure>
+      <img src="assets/images/temple2.png" alt="">
+      <figcaption><strong>Figure 12.4:</strong> Designing the temple roof </figcaption>
+    </figure>
+    <figure>
+      <img src="assets/images/temple3.png" alt="">
+      <figcaption><strong>Figure 12.5:</strong> Partially finished temple structure</figcaption>
+    </figure>
+   
+    <p>Now having a reference for where the ball will roll too from the rails I can begin constructing the ball elevator which will raise a ball high enough for it to roll onto ruins located above the back playfield door opening. The iterative process of achieving a functional mechanism spanned over 4 days and has been summarized bellow:</p>
+
+    <div class="row split-50">
+      <div>
+        <p>My first idea was to use a conveyer belt (which I made using hot glue) with paddles. However this design had several major flaws. The main being that the stress on the motor from the belt tension, caused a considerably high rotational resistance which burned the motor almost immediately.</p>
+      </div>
+      <div>
+      <figure>
+        <img src="assets/images/elavator-v1.png" alt="">
+        <figcaption><strong>Figure 12.6:</strong> First ball elevator iteration</figcaption>
+      </figure>
+      </div>
+    </div>
+    <div class="row split-50">
+      <div>
+        <p>In the second iteration I replaced the motor drum with one I 3D printed and connected it to gears to reduce the tension on the motor. However due to the 1:1 ratio of the gears the belt rotated unreasonably fast.</p>
+      </div>
+      <div>
+        <figure>
+          <img src="assets/images/elavator-v2.png" alt="">
+          <figcaption><strong>Figure 12.7:</strong> Second ball elevator iteration</figcaption>
+        </figure>
+      </div>
+    </div>
+    <div class="row split-50">
+      <div>
+        <p>I replaced the gears with a 2:1 gear ratio and decided to add the drive drum at the top to increase efficiency. But after testing, the movement turned out to still be too fast, even with PWM speed adjustment.</p>
+      </div>
+      <div>
+        <figure>
+          <img src="assets/images/elavator-v3.png" alt="">
+          <figcaption><strong>Figure 12.8:</strong> Third ball elevator iteration</figcaption>
+        </figure>
+      </div>
+    </div>
+    <div class="row split-50">
+      <div>
+        <p>The replacement of the 2:1 gear ratio with a 14:1 reduced the speed considerably resulting in a belt movement that was able to latch onto a ball successfully. However as the gears where directly attached to the back wall panel, it acted as an amplifier, creating a loud rattling sound that would interfere with the speaker audio.</p>
+      </div>
+      <div>
+        <figure>
+          <img src="assets/images/elavator-v4.png" alt="">
+        <figcaption><strong>Figure 12.9:</strong> Fourth ball elevator iteration</figcaption>
+        </figure>
+      </div>
+    </div>
+    <div class="row split-50">
+      <div >
+        <p>In the final design I had attached the gears to the opposite side as shown in Figure 12.10, added felt pads to further reduce noise by removing gear rubbing, and replaced the excessive 12V motor with a smaller 5V motor as shown in Figure 12.12, all this and the combination of using a paper belt instead, resulted in smooth, consistent belt movement and a considerable reduction in gear noise.  </p>
+        <p>Furthermore, the gears being on the panel facing wall provided an ideal opportunity to add another acrylic sheet window (shown in Figure 12.11) to show the meshing gears along with the rising of a ball. A demonstration of the working mechanism will be shown in the following chapter.</p>
+      </div>
+      <div>
+        <figure>
+          <img src="assets/images/elavator-v5-image1.png" alt="">
+          <figcaption><strong>Figure 12.10:</strong> Gears for final ball elevator design</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/images/elavator-window.png" alt="">
+          <figcaption><strong>Figure 12.11:</strong> Acrylic widen for final ball elevator design</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/images/elavator-v5-image2.png" alt="">
+          <figcaption><strong>Figure 12.12:</strong> Final design dry fit</figcaption>
+        </figure>
+        
+        
+        
+      </div>
+    </div>
+
+    <p>Now with an indication of the exact raised hight of the balls, I started constructing the ruins. I began by cutting various lengths and sizes of cardboard and layering them incrementally into a tunnel shape to resemble an ancient beam structure whilst keeping an opening for visibility as shown in Figure 11.13. </p>
+    <p>Initially, I thought the OLED would be best located centered on the back playfield panel but I had the idea to embed the OLED display in the ruins as shown in Figure 11.13 which I felt was more suitable. The ruins were also made as a separate structure for ease of painting and external testing which can be seen in Figure 11.14 before permanently mounting into place.</p>
+    <figure class="medium">
+      <img src="assets/images/ruins1.png" alt="">
+      <figcaption><strong>Figure 11.13:</strong> Ruins structure with embedded OLED display</figcaption>
+    </figure>
+    <figure class="medium">
+      <img src="assets/images/ruins2.png" alt="">
+      <figcaption><strong>Figure 11.14:</strong> Embedded OLED display powered</figcaption>
+    </figure>
+   
+    <div class="row split-50">
+      <div>
+        <p>With that complete I needed to change the initial design of the sensor activated door (see Figure 11.15) as due to the direct connection of the motor to the rotating plate, the door spins too fast, impacting both the 'ancient secret door' opening feel and precise timings required for accurate opening and closing. </p>
+      </div>
+      <div>
+        <img src="assets/images/old-rotating-door-design.png" alt="">
+        <figcaption><strong>Figure 11.15:</strong> Initial design of rotating door</figcaption>
+      </div>
+      
+    </div>
+
+    <p>The solution I came up with was to use that small motor I salvaged from the book toy in combination with a reduction gear train that I designed and 3D printed. The CAD model can bee seen in Figure 11.16 and its functioning in Figure 11.17.</p>
+    <figure class="medium">
+      <img src="assets/images/gear-reduction-cad.png" alt="">
+      <figcaption><strong>Figure 11.16:</strong> CAD model of gear speed reduction for rotation door</figcaption>
+    </figure>
+    <figure>
+      <video src="assets/videos/door-gears.mp4" poster="assets/images/door-gears-cover.png" controls></video>
+      <figcaption><strong>Figure 11.17:</strong> Rotating door final design demonstration (video link: <a href="https://youtu.be/vHvgbIoh1Cc" target="_blank">https://youtu.be/vHvgbIoh1Cc</a>) </figcaption>
+    </figure>
+
+  </section>
+
+  <section id="c13">
+    <h2>Chapter 13: Painting</h2>
+    <div class="row split-50">
+      <div>
+        <p>Originally I had planned to make the whole machine in two separate pieces for ease of building then at the end glue the two permanently together. However I realised I could instead have the two parts lock into one another using hooks as shown in Figure 13.1.</p>
+        <p>This not only matched the rigidity as if it were attached permanently (which was the main concern) but it would allow for easy access to all parts of the machine for maintenance and future improvements.</p>
+      </div>
+      <div>
+        <figure>
+          <img src="assets/images/hooks.jpeg" alt="">
+          <figcaption><strong>Figure 13.1:</strong> Machine enclosure hooks</figcaption>
+        </figure>
+      </div>
+    </div>
+
+    <p>Then came painting. After some analysis of the theme board I decided on three base colors: stone grey for structures, brown for the playfield, and a lush jungle green for the walls. Then I would scatter various shades of 'overgrown' greens to resemble plants, grass, moss and vines.</p>
+    <p>I started by painting all the structures with their base grey color as shown in Figure 13.2, followed by the playingfield as shown in Figure 13.3</p>
+    <figure>
+      <img src="assets/images/painting-structures.png" alt="">
+      <figcaption><strong>Figure 13.2:</strong> Painting structures</figcaption>
+    </figure>
+    <figure class="medium">
+      <img src="assets/images/painting-playingfield.png" alt="">
+      <figcaption><strong>Figure 13.3:</strong> Painting playfield</figcaption>
+    </figure>
+    
+    <p>In doing so I realised the current flipper design was unreliable due to excessive friction in the actuation button and between the flippers, playfield and rotating actuation piece, which caused the flippers to become jammed and difficult to actuate.</p>
+    <p>The solution I came up with was to use 3D printed spacers on each contact point as shown in Figure 13.4 to elevate the cardboard surfaces slightly as shown in Figure 13.5 to remove all paper-to-paper friction.</p>
+    <div class="img-row">
+      <figure>
+        <img src="assets/images/flipper-spacers.png" alt="">
+        <figcaption><strong>Figure 13.4:</strong> Plastic spacers attached to flippers and playfield</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/images/flipper-frictionless.png" alt="">
+        <figcaption><strong>Figure 13.5:</strong> Elevated flippers due to the spacers</figcaption>
+      </figure>
+    </div>
+    <p>For the actuator buttons that also had disproportionate friction, I attached wooden craft sticks to all sides along with the button housing as shown in Figures 13.6 and 13.7, to instead have wood surface contact which would actually reduce friction overtime due to the surfaces becoming smoother, reducing surface roughness and therefore friction.<sup><a href="#fn-24" id="fnref-24">24</a></sup> </p>
+    <div class="img-row">
+      <figure>
+        <img src="assets/images/actuator-button-wooden.png" alt="">
+        <figcaption><strong>Figure 13.6:</strong> Attaching craft sticks to flipper buttons</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/images/actuator-button-housing.png" alt="">
+        <figcaption><strong>Figure 13.7:</strong> Attached craft sticks to button and its housing </figcaption>
+      </figure>
+    </div>
+    <!--video-->
+
+    <div class="row split-50">
+      <div>
+        <p>Another element that required improvement was the curved ramp used to guide balls into the playfield from the plunger as seen in Figure 13.8. Because the entry ramp had been attached to the playfield, after being seating into the machine housing the transition into the ramp was not seamless which caused irregular ball entry and in some cases blocked the ball from entering entirely. </p>
+        <p>My initial plan was to have magnets on both surfaces to force them flush, however after testing, the magnetic force from fridge magnetics was insufficient.</p>
+      </div>
+      <div>
+        <figcaption>
+          <img src="assets/images/plunger-ramp-issue.png" alt="">
+          <figcaption><strong>Figure 13.8:</strong> Initial playfield guide ramp design</figcaption>
+        </figcaption>
+      </div>
+    </div>
+    <div class="row split-50">
+      <div>
+        <p>Finally I decided on the slightly tedious but more robust solution to replace the entire ramp with a new design that is instead attached to the machine enclosure wall. The comparison of the two ramp designs can be seen in Figure 13.9 and a demonstration of the plunger can be seen in Figure 13.10. </p>
+        <figure>
+          <img src="assets/images/plunger-ramp-improved.jpeg" alt="">
+          <figcaption><strong>Figure 13.9:</strong> Playfield guide ramp comparison</figcaption>
+        </figure>
+        
+      </div>
+      <div>
+        <video src="assets/videos/improved-plunger-demonstration.mp4" poster="assets/images/plunger-demonstration-cover.png" controls></video>
+        <figcaption><strong>Figure 13.10:</strong> Improved plunger ramp demonstration (video link: <a href="https://youtu.be/MjMQOORu8_w" target="_blank">https://youtu.be/MjMQOORu8_w</a>) </figcaption>
+      </div>
+    </div>
+
+    <div class="row split-50">
+      <div>
+        <figure>
+          <img src="assets/images/ball-guide-installation.png" alt="">
+          <figcaption><strong>Figure 13.11:</strong> Ball guides installed underneath the playfield</figcaption>
+        </figure>
+      </div>
+      <div>
+        <p>Before finishing painting the interior, I built and installed all the ball guides as shown in Figure 13.11 along with the six acrylic sheet mounted sensors in their respective positions, all converging to a single shoot that will lead into the ball-release mechanism.</p>
+      </div>
+    </div>
+
+    <div class="img-row">
+      <figure>
+        <img src="assets/images/interior-painted1.jpeg" alt="">
+        <figcaption><strong>Figure 13.12:</strong> Completed interior painting</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/images/interior-painted3.jpeg" alt="">
+        <figcaption><strong>Figure 13.13:</strong> USB LEDs turned on</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section id="c14">
+    <h2>Chapter 14: The Control Box</h2>
+    <figure>
+      <img src="assets/images/control-box-idea.png" alt="">
+      <figcaption><strong>Figure 14.1:</strong> Whiteboard sketch of control box idea </figcaption>
+    </figure>
+    <p>Rather than disorganised wiring, I had the idea to have a control box as shown in Figure 14.1 that would be the central point for all wiring and house the:</p>
+    <ul>
+      <li>Arduino Uno</li>
+      <li>PWM potentiometers for controlling motor speeds and floodlight intensity</li>
+      <li>the DC-DC buck converter USB port that will connect to the USB lights and the 5V line</li>
+      <li>the battery holder</li>
+    </ul>
+    <p>So I constructed the box and attached the battery holder and USB port. However as I am making the box and playfield separate in the final design, the two pieces need to disconnect completely, and as the control box will be connected by wiring to the playfield I cannot permanently attach it to the machine enclosure without sacrificing detachability. So my plan was to secure the control box using hooks. The first iteration can be seen in the Figure 14.2 and the second in Figure 14.3.</p>
+    <figure class="medium"> 
+      <img src="assets/images/control-box-hooks1.jpeg" alt="">
+      <figcaption><strong>Figure 14.2:</strong> First iteration of control box hooks</figcaption>
+    </figure>
+    <figure class="medium">
+      <img src="assets/images/control-box-hooks2.jpeg" alt="">
+      <figcaption><strong>Figure 14.3:</strong> Second iteration of control box hooks</figcaption>
+    </figure>
+  
+    <p>However after testing two different attachment designs, both were unreliable due to excessive flexing when inserting the battery.</p>
+    <p>Upon further thought I realised that instead of detaching the whole control box, all that was required was to disconnect the wiring, so after some research, I determined:</p>
+    <ul>
+      <li>RCY connectors (see Figure 14.4) were most suitable for the LED strip lights and motor power lines as they are easy to disconnect and support up to 3A of current<sup><a href="#fn-25" id="fnref-25">25</a></sup>, and</li>
+      <li>For the logic lines, RE connectors were optimal as they directly connect to the Arduino Uno and the configuration of adjacent pins could be modified easily<sup><a href="#fn-25" id="fnref-25">25</a></sup></li>
+    </ul>
+    <p>So with this I purchased the necessary connectors from Aliexpress.</p>
+    <figure>
+      <img src="assets/images/connector-order.png" alt="">
+      <figcaption><strong>Figure 14.4:</strong> RCY connections that were bought from Aliexpress</figcaption>
+    </figure>
+    
+    <div class="row split-50">
+      <div>
+        <p>Then I proceeded with permanently attaching all playfield LED strip lights and connecting them in series. I achieved each RGB color by connecting one wire to the positive copper pad and the other to one of the three ground copper pads (R-red, G-green, B-blue) as shown in Figure 14.5.</p>
+      </div>
+      <div>
+        <figure>
+          <img src="assets/images/led-strip-soldered.png" alt="">
+        <figcaption><strong>Figure 14.5:</strong> Wires soldered to the LED strip light to create green </figcaption>
+      </figure>
+      </div>
+      
+    </div>
+
+    <p>Then came testing. I began with the main loads which included the LED lights and motors as shown in Figure 14.6 and demonstrated in Figure 14.7.</p>
+
+    <div class="img-row">
+      <figure>
+        <img src="assets/images/testing-lights.jpeg" alt="">
+        <figcaption><strong>Figure 14.6:</strong> Testing the series LED light strip</figcaption>
+      </figure>
+      <figure>
+        <video src="assets/videos/testing-motors.mp4" poster="assets/images/testing-motors-cover.png" controls></video>
+        <figcaption><strong>Figure 14.7:</strong> Testing all motors in parallel (video link: <a href="https://youtu.be/hcVID8mjap0" target="_blank">https://youtu.be/hcVID8mjap0</a>)</figcaption>
+      </figure>
+    </div>
+
+    <div class="row split-50">
+      <div>
+        <figure>
+          <img src="assets/images/mounted-speaker.png" alt="">
+          <figcaption><strong>Figure 14.8:</strong> Speaker and ruins attached to the playfield</figcaption>
+        </figure>
+      </div>
+      <div>
+        <p>With the main loads tested and functioning, I proceeded to mount the structures permanently in place (which included the ruins, sensor-activated door and ball elevator) and the speaker along with the DFPlayer as shown in Figure 14.8.</p>
+      </div>
+    </div>
+    
+    <div class="row split-50">
+      <div>
+        <p>Before testing all the digital electronics I needed to mount the spinner in place.</p>
+        <p>As shown in Figure 14.9, in the first iteration my idea was to use a 3D printed gear reduction box powered by a 5V motor to reduce the rotation speed. Although it was functional, similar to the early ball-elevator design, the playfield acted as an amplifier which resulted in a considerably noisy sound.</p>
+        <p>So I replaced the initial design with a direct connection from a 12V motor to the spinner using a 3D printed D bore pin that the D-shaft pin of the spinner can slide into from above. This managed to eliminate almost all noise and using the PWM controllers I was still able to reduce the speed of the spinner to an ideal RPM.</p>
+    
+      </div>
+      <div>
+        <figure>
+          <img src="assets/images/spinner-iteration1.png" alt="">
+          <figcaption><strong>Figure 14.9:</strong> Initial design of motor gear box for spinner</figcaption>
+        </figure>
+        
+      </div>
+    </div>
+    
+    <div class="row split-50">
+      <div>
+        <p>I then tested the ball elevator again, along with the temple door and spinner, which can be seen in Figure 14.10. </p>
+      </div>
+      <div>
+        <figure>
+          <video src="assets/videos/testing-ball-elavator.mp4" poster="assets/images/ball-elevator-cover.png" controls></video>
+          <figcaption><strong>Figure 14.10:</strong> Demonstration of the ball elevator (video link: <a href="https://youtu.be/AOq_neM3DTI" target="_blank">https://youtu.be/AOq_neM3DTI</a>) </figcaption>
+        </figure>
+      </div>
+    </div>
+
+    <p>Finally, I could begin connecting all electronics to the microcontroller and power supply and begin testing them under actual operating conditions. This setup can be seen in Figure 14.11.</p>
+    <figure>
+      <img src="assets/images/testing-electronics.jpeg" alt="">
+      <figcaption><strong>Figure 14.11:</strong> Connected electronics to microcontroller and laptop for testing</figcaption>
+    </figure>
+    
+    <p>I started by testing each electrical system individually which included audio, each sensor, the display, and the transistor activated door. Bellow I've added a few example of the code I written to perform each test and the corresponding test demonstrations. </p>
+    
+    <div class="row split-50">
+      <div>
+        <figure>
+          <img src="assets/images/audio-test-code.png" alt="">
+          <figcaption><strong>Figure 14.12:</strong> Audio test code file screenshot</figcaption>
+        </figure>
+      </div>
+      <div>
+        <figure>
+          <video src="assets/videos/audio-test-video.mp4" poster="assets/images/audio-cover.png" controls></video>
+          <figcaption><strong>Figure 14.13:</strong> Audio test (video link: <a href="https://youtu.be/OCXDGG6yBBU" target="_blank">https://youtu.be/OCXDGG6yBBU</a>) </figcaption>
+        </figure>
+      </div>
+    </div>
+
+    <div class="row split-50">
+      <div>
+        <figure>
+          <img src="assets/images/sensor-test-code.png" alt="">
+          <figcaption><strong>Figure 14.14:</strong> Sensor and OLED display code file screenshot</figcaption>
+        </figure>
+      </div>
+      <div>
+        <figure>
+          <video src="assets/videos/sensor-test-video.mp4" poster="assets/images/sensor-cover.png" controls></video>
+          <figcaption><strong>Figure 14.15:</strong> Sensor and OLED display test (video link: <a href="https://youtu.be/yiQBhSi3y2Y" target="_blank">https://youtu.be/yiQBhSi3y2Y</a>)</figcaption>
+        </figure>
+      </div>
+    </div>
+
+    <div class="row split-50">
+      <div>
+        <figure>
+          <img src="assets/images/motor-test-code.png" alt="">
+          <figcaption><strong>Figure 14.16:</strong> Transistor activated door code file screenshot</figcaption>
+        </figure>
+      </div>
+      <div>
+        <figure>
+          <video src="assets/videos/motor-test-video.mp4" poster="assets/images/motor-door-cover.png" controls></video>
+          <figcaption><strong>Figure 14.17:</strong> Transistor activated door test (video link: <a href="https://youtu.be/XPkrXaYG49w" target="_blank">https://youtu.be/XPkrXaYG49w</a>) </figcaption>
+        </figure>
+      </div>
+    </div>
+
+    <p>After I validated all the electrical systems in isolation I began incrementally combining them into a single program file to test joint functioning, however I encountered a problem which I explain in Figure 14.18 at the time I solved it.</p>
+    <figure>
+      <video src="assets/videos/flickering-issue.mp4" poster="assets/images/flickering-cover.png" controls width="70%"></video>
+      <figcaption><strong>Figure 14.18:</strong> Capacitor issue explanation (video link: <a href="https://youtu.be/e6pwO_EbxKY" target="_blank">https://youtu.be/e6pwO_EbxKY</a>)</figcaption>
+    </figure>
+    
+    <p>The reason I added the capacitor initially was to stabilise the supply and prevent voltage dips caused by sudden current changes in the system.<sup><a href="#fn-26" id="fnref-26">26</a></sup></p>
+    <p>However researching in hindsight, the reason why the capacitor caused the flickering had to do with the fact that on power up the capacitor draws a large inrush current which causes the 12V rail to briefly dip and due to the DC-DC buck converter requiring a stable voltage, it shuts down (for protection), and when the voltage recovers the converter tries to restart.<sup><a href="#fn-27" id="fnref-27">27</a></sup> This ON-OFF cycle repeats continuously which appeared as flickering every few seconds.</p>
+  
+    <p>With all electrical tests now complete, I began painting the exterior. This was achieved by first applying a base coat of grey, followed by darker lines to resemble brick walls, then finally hand rendering ancient symbols using a vibrant gold and adding subtle green accents with emphasis on the corners. The finished painted exterior can be seen in Figure 14.19.</p>
+    <figure>
+      <img src="assets/images/painted-exterior.png" alt="">
+      <figcaption><strong>Figure 14.19:</strong> Back view of painted machine exterior</figcaption>
+    </figure>
+  </section>
+
+  <section id="c15">
+    <h2>Chapter 15: Facing The Coin Mechanism (again)</h2>
+    <p>A significant amount of time has passed since I had installed the ball release mechanism and consequently due to the nature of its design, it had stopped functioning as intended. This was mainly seen with inconsistencies in the return of the ball-release sliding platform due to variations in friction.</p>
+    <p>After thorough evaluation I had come to the conclusion that the design was fundamentally unreliable due to too many variables being at play (impulse and length of press, delay of slider, tension in the elastic bands - which reduce overtime, friction and precise coin drop timing).</p>
+    <p>Revaluating the problem from first principles, I identified three usable coin properties: size, mass and metallic composition. Taking a mass-based approach, the idea then to use a lever and fulcrum mechanism quickly came apparent. So I began by removing the existing size-based design (keeping the coin rejection ramp as that proved reliable) and repositioning the ball guides. The transformation process can be seen in Figures 15.1, 15.2, 15.3, and 15.4.</p>
+    <figure class="medium">
+      <img src="assets/images/ball-release-redesign1.png" alt="">
+      <figcaption><strong>Figure 15.1:</strong> Existing ball release mechanism design </figcaption>
+    </figure>
+    <figure class="medium">
+      <img src="assets/images/ball-release-redesign2.png" alt="">
+      <figcaption><strong>Figure 15.2:</strong> Removal of the existing mechanism</figcaption>
+    </figure>
+    <figure class="medium">
+      <img src="assets/images/ball-release-redesign3.png" alt="">
+      <figcaption><strong>Figure 15.3:</strong> Adding new and repositioned ball guides</figcaption>
+    </figure>
+    <figure class="medium">
+      <img src="assets/images/ball-release-redesign4.png" alt="">
+      <figcaption><strong>Figure 15.4:</strong> Designing the new fulcrum-lever mechanism</figcaption>
+    </figure>
+    
+    <p>The idea was to use the weight of a coin on a paddle to apply a force to a connected lever, rotating it about a fulcrum, lifting a rear gate and releasing the balls. The coin would then slide of the paddle due to its slop, removing the force and the lever would return to its resting position using an elastic thread. In theory.</p>
+    <p>I began work on the mechanism and conveniently due to its simplicity compared to the previous design, approximately one hour later I had a working coin activated ball-release system as demonstrated in Figure 15.5. </p>
+    <figure>
+      <video src="assets/videos/new-ball-release.mp4" poster="assets/images/new-ball-release-cover.png" controls></video>
+      <figcaption><strong>Figure 15.5:</strong> Demonstration of redesigned ball-release mechanism (video link: <a href="https://youtu.be/GfSH6ugdsl4" target="_blank">https://youtu.be/GfSH6ugdsl4</a>) </figcaption>
+    </figure>
+    
+    <p>This design performed exceptionally well, with a 100% success rate across over 40 coin trials. I also added a servo motor, which I had on hand from a previous project, to the rear end of the lever, allowing for automated release of the balls if the user selects the free 'adventure mode'. In addition I replaced the cardboard pushbutton with a plastic 3D printed one I designed to reduce the excessive friction which was experience before - this managed to substantially reduce actuation force and significantly improved button responsiveness.</p>
+  </section>
+
+  <section id="c16">
+    <h2>Chapter 16: Programming</h2>
+    <p>Before moving onto programming the final software game architecture, I had to make various minor improvements throughout the machine following issues that had surfaced after testing gameplay functionality:</p>
+    <ul>
+      <li>
+        The biggest one was inconsistencies with sensor ball detection in a number of locations. After examining the cause it became apparent that balls moving over sensors on the acrylic had too much side-to-side movement. Eventually I came up with the idea to have balls roll on rails instead, which I made using skewer sticks as shown in Figure 16.1 and 16.2. This design removed almost all lateral play resulting in consistent and precise positioned passes allowing for successful sensor detection 100% of the time.
+        <div class="img-row">
+          <figure>
+            <img src="assets/images/sensor-rails.png" width="60%" alt="">
+            <figcaption><strong>Figure 16.1:</strong> Rails and sensor from second level drop</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/images/sensor-rails2.png" width="50%" alt="">
+            <figcaption><strong>Figure 16.2:</strong> Rails and sensor from the outlane drop</figcaption>
+          </figure>
+        </div>
+      </li>
+      <li>
+        Due to an unintended impact from myself, I damaged the third level as can be seen in Figure 16.3, but fortunately all surrounding structures remained intact. So I removed the existing acrylic level and began making a new one, in doing so I managed to improve the aesthetics by incorporating a more geometric shape. Also I needed to replace the toggle switch gate that was originally made from craft sticks. I figured It would be more reliable to use a 3D printed version so I designed one in CAD as shown in Figure 16.4 and installed the structure in place as shown in Figure 16.5.
+        <div class="img-row">
+          <figure>
+            <img src="assets/images/3rd-layer-damaged.png" alt="">
+            <figcaption><strong>Figure 16.3:</strong> Damaged third level</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/images/randomiser-CAD.png" alt="">
+            <figcaption><strong>Figure 16.4:</strong> CAD model of toggle switch gate</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/images/3rd-layer-improved.png" alt="">
+            <figcaption><strong>Figure 16.5:</strong> New design of the third level with attached rails</figcaption>
+          </figure>
+        </div>
+      </li>
+      <li>
+        I used a 3D printed bracket I designed to prevent movement of the rails leading into the temple (see Figure 16.5) whilst also allowing for disassembly.
+      </li>
+      <li>
+        <div class="row split-50">
+          <div>
+            Lastly I found a slight bowing in the top frame so I 3D printed magnetic brackets to hold it down as shown in Figure 16.6.
+          </div>
+          <div>
+            <figure>
+              <img src="assets/images/magnetic-top.png" alt="">
+              <figcaption><strong>Figure 16.6:</strong> Magnetic brackets to hold the top down</figcaption>
+            </figure>
+          </div>
+          
+        </div>
+      </li>
+    </ul>
+
+    <p>In addition I spent a few days building a wooden support frame stand to hold the machine at the ideal playing hight which can be seen in Figure 16.7. </p>
+    <figure class="medium">
+      <img src="assets/images/support-frame.png" alt="">
+      <figcaption><strong>Figure 16.7:</strong> Support frame stand for machine</figcaption>
+    </figure>
+    <p>With that complete and all the hardware now installed and tested it was time to program the full game.</p>
+    <p>I began by identifying the software features I wanted to implement:</p>
+    <ul>
+      <li>Brief introduction when the game powers on (from OLED display and a 'host' AI voice)</li>
+      <li>Mode selection: 'adventure' and the 'main mode' </li>
+      <li>If adventure selected:</li>
+      <ul>
+        <li>Difficulty selection (changing sensor scoring and door opening timings)</li>
+        <li>Ball amount selection</li>
+      </ul>
+      <li>Game screen showing the players score and balls left</li>
+      <li>Ability to set the new high score if the main mode was selected</li>
+      <li>Game over screen showing the final score</li>
+      <li>Option to select to play again</li>
+    </ul>
+
+    <p>Knowing the features I wanted to implement, I then developed the software logic flow diagram which can be seen in Figure 16.8.</p>
+    <figure class="medium">
+      <img src="assets/images/software-logic-flow-diagram.png" alt="">
+      <figcaption><strong>Figure 16.8:</strong> Whiteboard sketch of software logic flow diagram</figcaption>
+    </figure>
+    
+    <p>Using the flow diagram I began programming and implementing each stage sequentially to make debugging significantly easier. Utilising the official language documentation<sup><a href="#fn-28" id="fnref-28">28</a></sup> when necessary.</p>
+    <p>Also I found that physically designing the OLED user interface was highly inefficient, as every time I wanted to see how a shape or piece of text looked, I had to wait for the code to compile which could take upwards of 30 seconds. So searching for a solution on the internet, I found an online Arduino simulator website<sup><a href="#fn-29" id="fnref-29">29</a></sup> that was able to simulate my specific OLED module, push button, and microcontroller. This drastically improved efficiency, taking just a few seconds to see any changes I made on the OLED. Then when I was satisfied with the functioning and display design, I incorporated the logic into the physical Arduino program.</p>
+    <p>A few days, considerable debugging, and approximately 300 lines of code later, the machine software was complete and functioning.</p>
+    
+  </section>
+
+  <section id="c17">
+    <h2>Chapter 17: The Final Design</h2>
+    
+    <p>To showcase the final design I recorded a video where I demonstrate the main features, the user experience flow, and machine gameplay which can be seen in Figure 17.1.</p>
+    <figure >
+      <div class="video-container">
+        <iframe src="https://youtube.com/embed/bTQfwOmuHvw"
+          frameborder="0" allowfullscreen  >
+        </iframe>
+      </div>
+      <figcaption><strong>Figure 17.1:</strong> Final design demonstration (video link: <a href="https://youtu.be/bTQfwOmuHvw" target="_blank">https://youtu.be/bTQfwOmuHvw</a>)</figcaption>
+    </figure>
+ 
+
+    <div class="display-board">
+      <img src="assets/images/oled-display-showcase.png" alt="">
+      <img src="assets/images/flood-lighting.png" alt="">
+      <img src="assets/images/playfield-wiring.png" alt="">
+      <img src="assets/images/plunger-lighting.png" alt="">
+      <img src="assets/images/control-box-display.png" alt="">
+      <img src="assets/images/rails.png" alt="">
+      <img src="assets/images/sensor-showcase.png" alt="">
+      <img src="assets/images/top-removed.png" alt="">
+      <img src="assets/images/top-view.png" alt="">
+    </div>
+    <!--images, videos, explanations of final design and how it works-->
+    <!--results-->
+  
+    <h3>The Evaluation</h3>
+    <p>The final design has successfully met its original aim of being a functional, engaging and visually aesthetic pinball style game. Although not being entirely constructed out of salvaged and recycled materials as originally set out, the final additional expenditure for the project was only ~£10, and with the machine being built primarily from recycled cardboard and salvaged electrical components, the objective of constructing a machine from recycled materials whilst maintaining functionality and durability was mostly met. In some areas, the project has exceeded original expectations. This mainly came with the addition of electronic systems such as integrating sensor based scoring, an OLED display, and audio from a speaker. </p>
+    <p>Although the original aims have been met, several areas could be improved, the main being the inconvenience of having to replace the elastic bands every 3-5 days, this could potentially be eliminated entirely in the future by using a unique elastic material with a longer lifespan. If the project were repeated I would adopt a stronger emphasis on using 3D printed features in areas such as mechanical elements, actuator buttons, and delicate components to ensure more reliable and durable designs whilst also being more efficient to produce which would considerable save production time.</p>
+    <p>Numerous iterations were required to successfully achieve functionally in many of the core features including the sensors, ball-release mechanism, and ball elevator. This has not only considerably improved my problem solving ability but I was able to develop many engineering related skills including designing electronic circuits, computer aided design (CAD), programming, soldering, and the basics of constructing mechanical systems.</p>
+  </section>
+
+  <hr>
+
+  <section>
+    <h2>References</h2>
+    <p id="fn-1">
+      <sup>1</sup>Wikipedia. (2020). Pinball. [online] Available at: https://en.wikipedia.org/wiki/Pinball.
+      <a href="#fnref-1">↩</a>
+    </p>
+    <p id="fn-2">
+      <sup>2</sup>The (2020). A complete history of pinball; from the first machine to now! [online] The Games Room Company. Available at: https://www.gamesroomcompany.com/blogs/news/a-complete-history-of-pinball-from-the-first-machine-to-now?utm_source=chatgpt.com.
+      <a href="#fnref-2">↩</a>
+    </p>
+    <p id="fn-3">
+      <sup>3</sup>The Strong National Museum of Play. (n.d.). Pinball. [online] Available at: https://www.museumofplay.org/toys/pinball/.
+      <a href="#fnref-3">↩</a>
+    </p>
+    <p id="fn-4">
+      <sup>4</sup>Wikipedia Contributors (2026). Game engagement theory. Wikipedia.
+      <a href="#fnref-4">↩</a>
+    </p>
+    <p id="fn-5">
+      <sup>5</sup>Csikszentmihalyi, M. (1990). Flow: the Psychology of Optimal Experience. 1st ed. New York: Harper and Row.
+      <a href="#fnref-5">↩</a>
+    </p>
+    <p id="fn-6">
+      <sup>6</sup>Schell, J. (2019). The Art of Game Design: A Book of Lenses. [online] Boca Raton: Taylor & Francis, a Crc Title, Part of the Taylor & Francis Imprint, a Member of the Taylor & Francis Group, the Academic Division of T&F Informa, Plc. Available at: https://www.inventoridigiochi.it/wp-content/uploads/2020/07/art-of-game-design.pdf.
+      <a href="#fnref-6">↩</a>
+    </p>
+    <p id="fn-7">
+      <sup>7</sup>Wikipedia Contributors (2018). Self-determination theory. [online] Wikipedia. Available at: https://en.wikipedia.org/wiki/Self-determination_theory.
+      <a href="#fnref-7">↩</a>
+    </p>
+    <p id="fn-8">
+      <sup>8</sup>Team, M.E. (2024). Reward Systems. [online] Meegle.com. Available at: https://www.meegle.com/en_us/topics/game-design/reward-systems.
+      <a href="#fnref-8">↩</a>
+    </p>
+    <p id="fn-9">
+      <sup>9</sup>Dahl, Ø.N. (2016). How To Choose a Power Supply. [online] Build Electronic Circuits. Available at: https://www.build-electronic-circuits.com/how-to-choose-a-power-supply/.
+      <a href="#fnref-9">↩</a>
+    </p>
+    <p id="fn-10">
+      <sup>10</sup>Leonardo Energy - Knowledge Base. (2023). Reliability of Terminations: Copper vs Aluminium. [online] Available at: https://help.leonardo-energy.org/hc/en-us/articles/203689001-Reliability-of-Terminations-Copper-vs-Aluminium.
+      <a href="#fnref-10">↩</a>
+    </p>
+    <p id="fn-11">
+      <sup>11</sup>Wikipedia Contributors (2019). Slider-crank linkage. [online] Wikipedia. Available at: https://en.wikipedia.org/wiki/Slider-crank_linkage.
+      <a href="#fnref-11">↩</a>
+    </p>
+    <p id="fn-12">
+      <sup>12</sup>circuitjournal.com. (n.d.). Wiring DFPlayer Mini (MP3 Module) to Arduino. Stereo/Mono Diagrams. - Circuit Journal. [online] Available at: https://circuitjournal.com/how-to-use-the-dfplayer-mini-mp3-module-with-an-arduino.
+      <a href="#fnref-12">↩</a>
+    </p>
+    <p id="fn-13">
+      <sup>13</sup>Wikipedia Contributors (2025). Motion detector. Wikipedia.
+      <a href="#fnref-13">↩</a>
+    </p>
+    <p id="fn-14">
+      <sup>14</sup>SHARMA, R. (2024). Display Modules: A Comprehensive Guide To Types And Technologies In 2024. [online] ThinkRobotics.com. Available at: https://thinkrobotics.com/blogs/learn/display-modules-a-comprehensive-guide-to-types-and-technologies-in-2024?srsltid=AfmBOopoTHGOFwTzS7EXvTiE6CQRBb2znWmToqg54_ZproPujjccZoYm.
+      <a href="#fnref-14">↩</a>
+    </p>
+    <p id="fn-15">
+      <sup>15</sup>Söderby, K. (2024). Getting Started with Arduino | Arduino Documentation. [online] docs.arduino.cc. Available at: https://docs.arduino.cc/learn/starting-guide/getting-started-arduino/.
+      <a href="#fnref-15">↩</a>
+    </p>
+    <p id="fn-16">
+      <sup>16</sup>IndustriesMore, jenfoxbotFoxBot (n.d.). A Beginner’s Guide to Microcontrollers. [online] Instructables. Available at: https://www.instructables.com/A-Beginners-Guide-to-Microcontrollers/.
+      <a href="#fnref-16">↩</a>
+    </p>
+    <p id="fn-17">
+      <sup>17</sup>Scherz, P. and Monk, S. (2016). Practical Electronics for Inventors, Fourth Edition, 4th Edition.
+      <a href="#fnref-17">↩</a>
+    </p>
+    <p id="fn-18">
+      <sup>18</sup>Programming Electronics Academy (2022). Arduino MASTERCLASS | Full Programming Workshop in 90 Minutes! YouTube. Available at: https://www.youtube.com/watch?v=BLrHTHUjPuw.
+      <a href="#fnref-18">↩</a>
+    </p>
+    <p id="fn-19">
+      <sup>19</sup>Just Baselmans (2024). Best Way to Play Audio on Arduino! DFPlayer mini / MP3-TF-16p Tutorial. [online] YouTube. Available at: https://www.youtube.com/watch?v=7WiSeQxb1bU.
+      <a href="#fnref-19">↩</a>
+    </p>
+    <p id="fn-20">
+      <sup>20</sup>Santos, R. (2019). Guide for I2C OLED Display with Arduino. [online] Random Nerd Tutorials. Available at: https://randomnerdtutorials.com/guide-for-oled-display-with-arduino/.
+      <a href="#fnref-20">↩</a>
+    </p>
+    <p id="fn-21">
+      <sup>21</sup>Adafruit (2021). Adafruit GFX Library. [online] GitHub. Available at: https://github.com/adafruit/Adafruit-GFX-Library.
+      <a href="#fnref-21">↩</a>
+    </p>
+    <p id="fn-22">
+      <sup>22</sup>adafruit (2020). adafruit/Adafruit_SSD1306. [online] GitHub. Available at: https://github.com/adafruit/Adafruit_SSD1306.
+      <a href="#fnref-22">↩</a>
+    </p>
+    <p id="fn-23">
+      <sup>23</sup>IC Online. (2025). How Diodes Across Relay Coils Protect Circuits | IC Online. [online] Available at: https://www.ic-online.com/blog/post/how-diodes-across-relay-coils-protect-circuits.
+      <a href="#fnref-23">↩</a>
+    </p>
+    <p id="fn-24">
+      <sup>24</sup>Xu, M., Li, L., Wang, M. and Luo, B. (2014). Effects of Surface Roughness and Wood Grain on the Friction Coefficient of Wooden Materials for Wood–Wood Frictional Pair. Tribology Transactions, 57(5), pp.871–878. doi:https://doi.org/10.1080/10402004.2014.920064.
+      <a href="#fnref-24">↩</a>
+    </p>
+    <p id="fn-25">
+      <sup>25</sup>Core Electronics. (2020). Identify Electrical Connectors - Tutorial Australia. [online] Available at: https://core-electronics.com.au/guides/identify-electrical-connectors/.
+      <a href="#fnref-25">↩</a>
+    </p>
+    <p id="fn-26">
+      <sup>26</sup>ushapower (2024). How Capacitors Affect Power Supply Performance | Usha Power. [online] Ushapower. Available at: https://ushapower.com/blog/how-capacitors-affect-power-supply-performance/.
+      <a href="#fnref-26">↩</a>
+    </p>
+    <p id="fn-27">
+      <sup>27</sup>Managing Inrush Current. (n.d.). Available at: https://www.ti.com/lit/an/slva670a/slva670a.pdf.
+      <a href="#fnref-27">↩</a>
+    </p>
+    <p id="fn-28">
+      <sup>28</sup>Arduino (2024). Language Reference. [online] Arduino.cc. Available at: https://docs.arduino.cc/language-reference/.
+      <a href="#fnref-28">↩</a>
+    </p>
+    <p id="fn-29">
+      <sup>29</sup>wokwi.com. (n.d.). Arduino on Wokwi - Online ESP32, STM32, Arduino Simulator. [online] Available at: https://wokwi.com/arduino.
+      <a href="#fnref-29">↩</a>
+    </p>
+  
+  </section>
+</body>
+
+
+</html>
